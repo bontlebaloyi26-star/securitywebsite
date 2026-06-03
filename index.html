@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Moraba Security Solutions</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Montserrat', sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+      color:#111;
+      line-height:1.6;
+    }
+
+    header{
+      background:#0d0d0d;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo{
+      color:#fff;
+      font-size:28px;
+      font-weight:800;
+    }
+
+    .logo span{
+      color:#c89b3c;
+    }
+
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin-left:25px;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#c89b3c;
+    }
+
+    .hero{
+      height:90vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url("images/mss.jpg");
+
+      background-size:cover;
+      background-position:100% center;
+      display:flex;
+      align-items:center;
+      padding:0 8%;
+      color:#fff;
+    }
+
+    .hero-content{
+      max-width:700px;
+    }
+
+    .hero h1{
+      font-size:60px;
+      margin-bottom:20px;
+      line-height:1.1;
+    }
+
+    .hero h1 span{
+      color:#c89b3c;
+    }
+
+    .hero p{
+      font-size:18px;
+      margin-bottom:30px;
+      color:#ddd;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 30px;
+      background:#c89b3c;
+      color:#000;
+      text-decoration:none;
+      font-weight:700;
+      border-radius:5px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#fff;
+    }
+
+    section{
+      padding:80px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:40px;
+    }
+
+    .section-title p{
+      color:#777;
+      margin-top:10px;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+      gap:25px;
+    }
+
+    .service-card{
+      background:#fff;
+      padding:35px;
+      border-radius:10px;
+      transition:0.3s;
+      border-bottom:4px solid transparent;
+    }
+
+    .service-card:hover{
+      transform:translateY(-5px);
+      border-color:#c89b3c;
+    }
+
+    .about{
+      background:#111;
+      color:#fff;
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+      gap:50px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:10px;
+    }
+
+    .about h2{
+      font-size:40px;
+      margin-bottom:20px;
+    }
+
+    .about span{
+      color:#c89b3c;
+    }
+
+    .contact{
+      background:#fff;
+    }
+
+    .contact-box{
+      background:#111;
+      padding:50px;
+      border-radius:10px;
+      color:#fff;
+      text-align:center;
+      max-width:600px;
+      margin:auto;
+    }
+
+    .contact-box p{
+      margin-bottom:10px;
+      color:#ddd;
+    }
+
+    .contact-box a{
+      color:#fff;
+      text-decoration:none;
+    }
+
+    footer{
+      background:#0d0d0d;
+      color:#fff;
+      text-align:center;
+      padding:20px;
+    }
+
+    footer span{
+      color:#c89b3c;
+    }
+
+    @media(max-width:768px){
+      .hero h1{
+        font-size:42px;
+      }
+
+      nav{
+        display:none;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      MORABA <span>SECURITY SOLUTIONS</span>
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Your Safety,<br><span>Our Priority</span></h1>
+      <p>
+        Professional security services for residential, commercial, and VIP protection. Reliable and rapid response security solutions.
+      </p>
+      <a href="#contact" class="btn">Get Protection</a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <p>Professional protection services you trust</p>
+    </div>
+
+    <div class="services">
+
+      <div class="service-card"><h3>Residential Protection</h3></div>
+      <div class="service-card"><h3>Business Premises Protection</h3></div>
+      <div class="service-card"><h3>Mobile Patrol Response</h3></div>
+      <div class="service-card"><h3>Access Control & Gate Management</h3></div>
+      <div class="service-card"><h3>Loss & Anti-Theft Services</h3></div>
+      <div class="service-card"><h3>VIP & Executive Protection</h3></div>
+      <div class="service-card"><h3>Armed & Unarmed Security Guarding</h3></div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div>
+      <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1200&auto=format&fit=crop" alt="">
+    </div>
+
+    <div>
+      <h2>About <span>Moraba Security</span></h2>
+      <p>
+        Moraba Security Solutions provides professional protection services focused on safety, reliability, and rapid response.
+      </p>
+    </div>
+
+  </section>
+
+ <section class="contact" id="contact">
+
+  <div class="contact-container">
+
+    <h2>Contact Us</h2>
+    <p class="contact-sub">We are available 24/7 for security assistance and quotes.</p>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <h3>Phone</h3>
+        <p>066 245 1021</p>
+        <p>082 622 4627</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Email</h3>
+        <p>bontlebaloyi26@gmail.com</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Location</h3>
+        <p>Pretoria, South Africa</p>
+      </div>
+
+      <div class="contact-card">
+        <h3>Instagram</h3>
+        <p>
+          <a href="https://instagram.com/moroba_solutions" target="_blank">
+            @moroba_solutions
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+  </div>
+
+</section>
+
+      <br>
+<section class="quote" id="quote">
+
+  <div class="quote-box">
+
+    <h1>Request a Quote</h1>
+
+    <div class="pricing">
+      <h2>Residential</h2>
+      <p>Joining Fee: R200 | Monthly: R100</p>
+
+      <br>
+
+      <h2>Business</h2>
+      <p>Joining Fee: R500 | Monthly: R300</p>
+    </div>
+
+    <form>
+
+      <select id="service" name="service" autocomplete="off">
+        <option value="">Select Service</option>
+        <option value="Residential Security">Residential Security</option>
+        <option value="Business Security">Business Security</option>
+      </select>
+
+      <input id="full-name" name="name" type="text" placeholder="Full Name" autocomplete="name" required>
+      <input id="phone-number" name="phone" type="tel" placeholder="Phone Number" autocomplete="tel" required>
+      <input id="email" name="email" type="email" placeholder="Email" autocomplete="email" required>
+
+      <textarea id="message" name="message" placeholder="Additional Information" autocomplete="off" required></textarea>
+
+      <button type="submit">Submit Request</button>
+
+    </form>
+
+  </div>
+
+</section>
+
+
+<script src="script.js"></script>
+</body>
+</html>
