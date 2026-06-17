@@ -46,10 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function submitQuote(form) {
-    if (window.location.protocol === 'file:') {
-      throw new Error('Please run this page from a PHP-enabled HTTP server, not directly from the file system. Example: php -S localhost:8000');
-    }
-
     const payload = {
       service: form.querySelector('select').value.trim(),
       name: form.querySelector('input[type="text"]').value.trim(),
@@ -58,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       message: form.querySelector('textarea').value.trim(),
     };
 
-    const response = await fetch('submit_quote.php', {
+    const response = await fetch('/api/submit_quote', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
