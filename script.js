@@ -2,10 +2,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('header nav a');
   const sections = document.querySelectorAll('section[id]');
   const quoteForm = document.querySelector('.quote-box form');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('header nav');
   const statusMessage = document.createElement('div');
 
   statusMessage.className = 'quote-status';
-  statusMessage.style.cssText = 'margin-top: 20px; color: #facc15; font-weight: 700; text-align: center;';
+
+  // Hamburger menu toggle
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      menuToggle.classList.toggle('open', isOpen);
+      menuToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close nav when a link is clicked
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        menuToggle.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 
   function setActiveNav() {
     const scrollPosition = window.scrollY + window.innerHeight / 3;
